@@ -2,12 +2,23 @@
     background-color: $accent-color-secondary;
 
     .header-container {
-        max-width: 1600px;
     
         padding-left: 15px;
         padding-right: 15px;
         margin-left: auto;
         margin-right: auto;
+
+        @media screen and (min-width: $mobile) { 
+            width: 480px;
+        }
+
+        @media screen and (min-width: $tablet) { 
+            width: 768px;
+        }
+
+        @media screen and (min-width: $desktop) { 
+            width: 1600px;
+        }
     }
 }
 
@@ -20,10 +31,30 @@
     align-items: center;
     justify-content: center;
 
+    @media screen and (max-width: $mobile) { 
+        display: none;
+    }
+
     .site-nav {
         display: flex;
         margin-left: 85px;
     }
+}
+
+.mobnav-container {
+    height: 60px;
+    padding: 15px;
+
+    @media screen and (max-width: $mobile) {
+        width: 480px;
+        
+    }
+
+    @media screen  and (min-width: 481px) {
+        display: none;
+    }
+
+  
 }
 
 .site-nav {
