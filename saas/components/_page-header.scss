@@ -1,0 +1,115 @@
+.container {
+    background-color: $accent-color-secondary;
+
+    .header-container {
+        max-width: 1600px;
+    
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.container.underline {
+    border-bottom: 1px solid $nav-color-underline;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .site-nav {
+        display: flex;
+        margin-left: 85px;
+    }
+}
+
+.site-nav {
+    .item + .item {
+        margin-left: 50px;
+    }
+
+    .link {
+        position: relative;
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        height: 80px;
+    
+        color: $text-color-main;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
+    }
+
+    .link.current {
+        color: $accent-color-main;
+    }
+
+    .link.current::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        
+        width: 100%;
+        height: 4px;
+    
+        content:"";
+        background-color: $accent-color-main;
+        border-radius: 2px;
+    }
+}
+
+.site-contacts {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 305px;
+
+    .item {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item + .item{
+        padding-left: 30px;
+    }
+
+    .link {
+        color: $text-color-secondary;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 0.02em
+    }
+
+    .link + .link {
+        padding-left: 10px;
+    }
+
+    .button-icon {
+        fill: $text-color-secondary;
+        margin-right: 10px;
+    
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .item:hover .button-icon {
+        fill: $accent-color-main;
+    }
+
+    .item:hover .link,
+    .item:focus .link {
+        color: $accent-color-main;
+    }
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.site-contacts .link:hover,
+.site-contacts .link:focus {
+    color: $accent-color-main;
+}

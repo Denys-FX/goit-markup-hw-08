@@ -1,0 +1,55 @@
+/*Portfolio navigation*/
+.portfolio-nav {
+    max-width: 1600px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    .portfolio-nav-item + .portfolio-nav-item {
+    margin-left: 8px;
+    }
+}
+
+.portfolio-sort {
+    padding-top: 94px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.portfolio-nav-list {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+
+    text-align: center;   
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 5px 22px ;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    
+    color: $text-color-main;
+    background-color: $bg-color-secondary;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.625;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color-main;
+        color: $accent-color-secondary;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+                    0px 1px 2px rgba(0, 0, 0, 0.08), 
+                    0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+ 
+.nav-button.current {
+    color: $accent-color-secondary;
+    background-color: $accent-color-main;
+}

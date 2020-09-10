@@ -1,0 +1,31 @@
+.site-logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+}
+
+.site-logo.main {
+    .logo-part1 {
+        color: $accent-color-main;
+    }
+    .logo-part2 {
+        color: $text-color-main;
+    }
+}
+
+.site-logo.secondary {
+    .logo-part1 {
+        color: $accent-color-main;
+    }
+
+    .logo-part2 {
+        color: $accent-color-secondary;
+    }
+}
+
+.logo.footer.link {
+    display: block;
+    margin-bottom: 20px;
+}
