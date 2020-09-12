@@ -3,49 +3,67 @@
     background-color: $bg-color-secondary;
 
     .team-container {
-        outline: 2px solid blue;
+        
         @media screen and (max-width: $mobile) {
-            
-            
+            width: 480px;
         }
-        max-width: 1600px;
+
+        @media screen and (min-width: $desktop) {
+            width: 1600px;
+        }
+        
+        outline: 2px solid blue;
         margin-left:auto;
         margin-right: auto;
     }
 }
 
-.team-container {
-    .team-section {
+.team-section {
+    @media screen and (max-width: $mobile) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
         padding-top: 94px;
         padding-bottom: 94px;
-        padding-left: 15px;
-        padding-right: 15px;
     }
-}
+   
+    padding-left: 15px;
+    padding-right: 15px;  
 
-.team-section {
     .section-title {
-        margin-top: 0;
-        margin-bottom: 50px;
-    
+        @media screen and (max-width: $mobile) {
+            margin-bottom: 30px;
+            
+            font-size: 28px;
+            line-height: 1.178; 
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 50px;
+            
+            font-size: 36px;
+            line-height: 1.17;
+        }
+
+        text-align: center;
         color: $text-color-main;
         font-weight: bold;
-        font-size: 36px;
-        line-height: 1.17;
-        text-align: center;
         letter-spacing: 0.03em;
     }
 
     .team-list {
+        @media screen and (min-width: $desktop) {
         display: flex;
         justify-content: center;
+        }
     }
 }
 
 .team-list {
     .team-item {
         padding-bottom: 24px;
-    
         text-align: center;
         background-color: $accent-color-secondary;
         border-radius: 0px 0px 4px 4px;
@@ -53,20 +71,30 @@
                     0px 1px 1px rgba(0, 0, 0, 0.14), 
                     0px 2px 1px rgba(0, 0, 0, 0.2);
     }
-
-    .team-item + .team-item {
-        margin-left: 30px;
+    @media screen and (min-width: $desktop) {
+        .team-item + .team-item {
+            margin-left: 30px;
+        }
     }
 }
 
 .team-item {
+    
     .team-member-photo {
+        @media screen and (max-width: $mobile) {
+            width: 450px;
+            height: 460px;
+        }
+        
         display: block;
+        
         margin-bottom: 30px;
+        border-radius: 0px;
     }
 
     .team-member-title {
         margin-bottom: 10px;
+
         color: $text-color-main;
         font-weight: 500;
         font-size: 16px;

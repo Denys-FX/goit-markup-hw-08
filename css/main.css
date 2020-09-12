@@ -910,36 +910,73 @@ h1, h2, h3, h4, h5, h6 {
 
 .team .team-container {
   outline: 2px solid blue;
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.team-container .team-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+@media screen and (max-width: 480px) {
+  .team .team-container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .team .team-container {
+    width: 1600px;
+  }
+}
+
+.team-section {
   padding-left: 15px;
   padding-right: 15px;
 }
 
+@media screen and (max-width: 480px) {
+  .team-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .team-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .team-section .section-title {
-  margin-top: 0;
-  margin-bottom: 50px;
+  text-align: center;
   color: #212121;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
   letter-spacing: 0.03em;
 }
 
-.team-section .team-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media screen and (max-width: 480px) {
+  .team-section .section-title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.178;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .team-section .section-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .team-section .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .team-list .team-item {
@@ -951,13 +988,23 @@ h1, h2, h3, h4, h5, h6 {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.team-list .team-item + .team-item {
-  margin-left: 30px;
+@media screen and (min-width: 1170px) {
+  .team-list .team-item + .team-item {
+    margin-left: 30px;
+  }
 }
 
 .team-item .team-member-photo {
   display: block;
   margin-bottom: 30px;
+  border-radius: 0px;
+}
+
+@media screen and (max-width: 480px) {
+  .team-item .team-member-photo {
+    width: 450px;
+    height: 460px;
+  }
 }
 
 .team-item .team-member-title {
