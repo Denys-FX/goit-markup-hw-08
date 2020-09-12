@@ -1,9 +1,10 @@
 /*Section "Team" styling*/
 .team {
+    outline: 2px solid blue;
     background-color: $bg-color-secondary;
 
     .team-container {
-        
+        outline: 1px solid tomato;
         @media screen and (max-width: $mobile) {
             width: 480px;
         }
@@ -12,7 +13,6 @@
             width: 1600px;
         }
         
-        outline: 2px solid blue;
         margin-left:auto;
         margin-right: auto;
     }
@@ -87,7 +87,7 @@
         }
         
         display: block;
-        
+
         margin-bottom: 30px;
         border-radius: 0px;
     }
@@ -124,6 +124,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
         width: 44px;
         height: 44px;
         border: 1px transparent;

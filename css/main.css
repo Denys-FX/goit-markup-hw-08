@@ -905,11 +905,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /*Section "Team" styling*/
 .team {
+  outline: 2px solid blue;
   background-color: #F5F4FA;
 }
 
 .team .team-container {
-  outline: 2px solid blue;
+  outline: 1px solid tomato;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1075,64 +1076,125 @@ h1, h2, h3, h4, h5, h6 {
 
 /*Section "Clients" styling*/
 .clients-container {
-  max-width: 1600px;
+  outline: 1px solid tomato;
   margin-left: auto;
   margin-right: auto;
 }
 
+@media screen and (max-width: 480px) {
+  .clients-container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .clients-container {
+    width: 1600px;
+  }
+}
+
 .clients-container .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
+@media screen and (max-width: 480px) {
+  .clients-container .clients {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .clients-container .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .clients .section-title {
-  margin-top: 0;
-  margin-bottom: 50px;
   color: #212121;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
 }
 
-.clients .company-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media screen and (max-width: 480px) {
+  .clients .section-title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.17;
+  }
 }
 
-.company-list .company-item {
+@media screen and (min-width: 1170px) {
+  .clients .section-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.178;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .clients .company-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .clients .company-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .company-list .company-item:nth-child(-n + 4) {
+    margin-bottom: 30px;
+  }
+  .company-list .company-item:nth-child(2n) {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .company-list .company-item + .company-item {
+    margin-left: 30px;
+  }
+}
+
+.company-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 170px;
   height: 90px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
 }
 
-.company-list .company-item + .company-item {
-  margin-left: 30px;
+@media screen and (max-width: 480px) {
+  .company-item {
+    width: 210px;
+  }
 }
 
-.company-item .link-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 1170px) {
+  .company-item {
+    width: 170px;
+  }
 }
 
 .company-item:hover, .company-item:focus {
@@ -1142,6 +1204,15 @@ h1, h2, h3, h4, h5, h6 {
 .company-item:hover .company-logo,
 .company-item:focus .company-logo {
   fill: #2196F3;
+}
+
+.company-item .link-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .link-logo .company-logo {
