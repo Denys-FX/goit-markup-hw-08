@@ -2,7 +2,7 @@
     background-color: $accent-color-secondary;
 
     .header-container {
-    
+        outline: 2px solid blue;
         padding-left: 15px;
         padding-right: 15px;
         margin-left: auto;
@@ -26,35 +26,58 @@
     border-bottom: 1px solid $nav-color-underline;
 }
 
-.nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @media screen and (max-width: $mobile) { 
-        display: none;
+.header-container {
+    .nav-container {
+        outline: 1px solid tomato;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        @media screen and (max-width: $mobile) { 
+            display: none;
+        }
+    
+        .site-nav {
+            display: flex;
+            margin-left: 85px;
+        }
     }
 
-    .site-nav {
+    .mobnav-container {
+        outline: 1px solid tomato;
         display: flex;
-        margin-left: 85px;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        
+        @media screen and (max-width: $mobile) {
+            width: 450px;
+        }
+    
+        @media screen and (min-width: 481px) {
+            display: none;
+        }
+
+        @media screen and (min-width: $desktop) {
+            display: none;
+        }
+        
+        .mob-menu {
+            outline: 1px solid tomato;
+            display: inline-block;
+
+            border: 0;
+            background-color: $accent-color-secondary;
+        }
     }
 }
 
-.mobnav-container {
-    height: 60px;
-    padding: 15px;
-
-    @media screen and (max-width: $mobile) {
-        width: 480px;
-        
+.mob-menu  {
+    &:hover .menu-active,
+    &:focus .menu-active,
+    &:active .menu-active{
+        fill: $accent-color-main;
     }
-
-    @media screen  and (min-width: 481px) {
-        display: none;
-    }
-
-  
 }
 
 .site-nav {
@@ -143,4 +166,10 @@
 .site-contacts .link:hover,
 .site-contacts .link:focus {
     color: $accent-color-main;
+}
+
+.mobnav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
