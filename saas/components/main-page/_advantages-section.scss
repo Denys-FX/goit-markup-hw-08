@@ -1,37 +1,55 @@
 /*Section "Advantages" styling*/
 .advantages-container {
-    max-width: 1600px;
+    @media screen and (max-width: $mobile) {
+        width: 480px; 
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 1600px; 
+    }
+
+    outline: 2px solid blue;
     margin-left:auto;
     margin-right: auto;
+}
 
-    .advantages-section {
-    padding-top: 94px;
+.advantages-section {
+    @media screen and (max-width: $mobile) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+    }
+
+    outline: 2px solid tomato;   
     padding-left: 15px;
     padding-right: 15px;
     margin-left:auto;
     margin-right: auto;
-    }
-}
-
-.advantages-section {
-    .advantages-list {
-        display: flex; 
-        justify-content: center;
-    }
 }
 
 .advantages-list {
-    .advantages-item {
-        width: 270px;
-        align-items: center;
-    }
+    @media screen and (min-width: $desktop) {
+        display: flex; 
+        justify-content: center;
 
-    .advantages-item + .advantages-item {
-        margin-left: 30px;
+        .advantages-item + .advantages-item {
+            margin-left: 30px;
+        }
     }
 }
 
 .advantages-item {
+    @media screen and (max-width: $mobile) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 270px;
+    }
+    
     &::before {
         display: block;
     
@@ -45,25 +63,45 @@
     }
 
     .advantages-subtitle {
+        @media screen and (max-width: $mobile) {
+            width: 450px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: 270px;
+        }
+
         display: inline-block;
-        width: 270px;
         margin-bottom: 10px;
-    
-        color: $text-color-main;
+        
+        text-align: center;
         font-weight: bold;
         font-size: 14px;
         line-height: 1.142;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+        color: $text-color-main;
     }
 
     .advantages-text {
-        width: 270px;
-    
+        @media screen and (max-width: $mobile) {
+            width: 450px;            
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: 270px;
+        }
+
         color: $text-color-secondary;
         font-size: 14px;
         line-height: 1.714;
         letter-spacing: 0.03em;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .advantages-item:not(:last-child) {
+        margin-bottom: 30px;
     }
 }
 
