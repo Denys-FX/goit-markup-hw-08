@@ -3,6 +3,11 @@
     background-color: $bg-color-secondary;
 
     .team-container {
+        outline: 2px solid blue;
+        @media screen and (max-width: $mobile) {
+            
+            
+        }
         max-width: 1600px;
         margin-left:auto;
         margin-right: auto;

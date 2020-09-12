@@ -3,8 +3,6 @@
 
     .header-container {
         outline: 2px solid blue;
-        padding-left: 15px;
-        padding-right: 15px;
         margin-left: auto;
         margin-right: auto;
 
@@ -32,6 +30,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        padding-left: 15px;
+        padding-right: 15px;
     
         @media screen and (max-width: $mobile) { 
             display: none;
@@ -48,10 +49,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
         height: 60px;
+        padding-left: 15px;
+        padding-right: 15px;
         
         @media screen and (max-width: $mobile) {
-            width: 450px;
+            width: 480px;
         }
     
         @media screen and (min-width: 481px) {
