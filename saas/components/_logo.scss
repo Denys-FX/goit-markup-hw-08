@@ -1,7 +1,4 @@
 .site-logo {
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
-
     @media screen and (max-width: $mobile) {
         font-size: 24px;
         line-height: 1.667;
@@ -13,6 +10,9 @@
         line-height: 1.2;
         letter-spacing: 0.03em;
     }
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 .site-logo.main {
