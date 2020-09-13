@@ -91,11 +91,15 @@
         @media screen and (min-width: $desktop) {
             width: 270px;
         }
+        
+        padding: 0;
 
-        color: $text-color-secondary;
         font-size: 14px;
         line-height: 1.714;
         letter-spacing: 0.03em;
+
+        color: $text-color-secondary;
+        
     }
 }
 
