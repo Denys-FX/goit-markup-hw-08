@@ -26,6 +26,10 @@
 
 .header-container {
     .nav-container {
+        @media screen and (max-width: $mobile) { 
+            display: none;
+        }
+
         outline: 1px solid tomato;
         display: flex;
         align-items: center;
@@ -34,10 +38,6 @@
         padding-left: 15px;
         padding-right: 15px;
     
-        @media screen and (max-width: $mobile) { 
-            display: none;
-        }
-    
         .site-nav {
             display: flex;
             margin-left: 85px;
@@ -45,6 +45,18 @@
     }
 
     .mobnav-container {
+        @media screen and (max-width: $mobile) {
+            width: 480px;
+        }
+    
+        @media screen and (min-width: 481px) {
+            display: none;
+        }
+
+        @media screen and (min-width: $desktop) {
+            display: none;
+        }
+
         position: fixed;
 
         outline: 1px solid tomato;
@@ -58,57 +70,58 @@
 
         background-color: $accent-color-secondary;
         
-        @media screen and (max-width: $mobile) {
-            width: 480px;
-        }
-    
-        @media screen and (min-width: 481px) {
-            display: none;
-        }
-
-        @media screen and (min-width: $desktop) {
-            display: none;
-        }
-
         .mob-menu-btn {
             display: inline-block;
-
-            border: 0;
-            background-color: $accent-color-secondary;
+            padding: 0;
+            margin: 0;
+            border: none;
+            background-color: transparent;
         }
     }
 }
 
 .mob-menu-btn {
-    &:hover .menu-active,
-    &:focus .menu-active,
-    &:active .menu-active{
+    .icon-menu {
+        display: block;
+    }
+
+    .icon-cross {
+        display: none;
+    }
+
+    &:hover .icon-menu,
+    &:focus .icon-menu,
+    &:hover .icon-cross,
+    &:focus .icon-cross {
         fill: $accent-color-main;
     }
 }
 
-.drop-menu-close {
-    position: absolute;
-    top: 0px;
-    right: 21px;
+.mob-menu-btn.is-open {
+    .icon-menu {
+        display: none;
+    }
+
+    .icon-cross {
+        display: block;
+    }
 }
-/*
-.drop-menu.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-*/
+
 .drop-menu {
+    display: none;
+
     position: absolute;
     top: 100%;
     left: 0;
 
-    width: 480px;
+    width: 100%;
     height: 453px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
     background-color: $accent-color-secondary;
 
-    transition-duration: 500ms;
+    &.is-open {
+        display: block;
+    }
 }
 
 .site-nav {

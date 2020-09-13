@@ -54,17 +54,21 @@
                             <span class="logo-part1">Web </span><span class="logo-part2">Studio</span>
                         </span> 
                     </a>
-                    <button class="mob-menu-btn">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path class="menu-active" fill-rule="evenodd" clip-rule="evenodd" d="M8 14.6667V12H32V14.6667H8ZM8 21.3333H32V18.6667H8V21.3333ZM8 28H32V25.3333H8V28Z" fill="black"/>
+                    <button 
+                        type="button" 
+                        class="mob-menu-btn" 
+                        aria-expanded="false"
+                        aria-controls="menu-container"
+                        data-menu-button>
+                        <svg 
+                            width="40px" 
+                            height="40px"
+                            aria-label="mobile menu switch">
+                            <use class="icon-menu" href="./images/mob-menu.svg#menu"></use>
+                            <use class="icon-cross" href="./images/mob-menu-close.svg#close"></use>
                         </svg>
                     </button>
-                    <div class="drop-menu is-hidden">
-                        <div class="drop-menu-close">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M29.6667 12.88L27.7867 11L20.3333 18.4533L12.88 11L11 12.88L18.4533 20.3333L11 27.7867L12.88 29.6667L20.3333 22.2133L27.7867 29.6667L29.6667 27.7867L22.2133 20.3333L29.6667 12.88Z" fill="#212121"/>
-                            </svg>
-                        </div>
+                    <div class="drop-menu" id="menu-container" data-menu>
                         <div class="mob-menu">
                             <ul class="site-nav list">
                                 <li class="item">
@@ -526,5 +530,6 @@
    </script>
    <!--Script for opening modal window via button placed at "Hero"-->
    <script src="./js/modal.js"></script>
+   <script src="./js/menu.js"></script>
 </body>
 </html>
