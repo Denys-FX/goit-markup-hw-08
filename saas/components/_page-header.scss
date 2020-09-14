@@ -6,11 +6,11 @@
         margin-left: auto;
         margin-right: auto;
 
-        @media screen and (max-width: $mobile) { 
-            width: 480px;
+        @media screen and (min-width: $mobile) { 
+            min-width: 480px;
         }
 
-        @media screen and (min-width: 481px) { 
+        @media screen and (min-width: $tablet) { 
             width: 768px;
         }
 
@@ -46,7 +46,7 @@
 
     .mobnav-container {
         @media screen and (max-width: $mobile) {
-            width: 480px;
+            min-width: 480px;
         }
     
         @media screen and (min-width: 481px) {
@@ -57,11 +57,7 @@
             display: none;
         }
 
-        top: 0;
-        bottom:0;
         position:fixed;
-        overflow-y:scroll;
-        overflow-x:hidden;
        
         outline: 1px solid tomato;
         display: flex;
