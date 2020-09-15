@@ -1,17 +1,20 @@
 /*Hero!*/
 .hero {
-    @media screen and (min-width: $desktop) {
-        background: $bg-color-transparent1;
-    }    
+    background: $bg-color-transparent1;
 }
 
 .hero-container {
-    padding-top: 60px;
+    
     margin-left: auto;
     margin-right: auto;
 
-    width: 480px;
-    height: 460px;
+    
+
+    @media screen and (min-width: $mobile) {
+        padding-top: 60px;
+        width: 480px;
+        height: 460px;
+    }
 
     @media screen and (min-width: $tablet) {
         padding-top: 0;
