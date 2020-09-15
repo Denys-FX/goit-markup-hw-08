@@ -1,14 +1,12 @@
 .container {
-    background-color: $accent-color-secondary;
-
+    @media screen and (min-width: $desktop) {
+        background-color: $accent-color-secondary;
+    }
+   
     .header-container {
-        outline: 2px solid blue;
         margin-left: auto;
         margin-right: auto;
-
-        @media screen and (min-width: $mobile) { 
-            min-width: 480px;
-        }
+        width: 480px;
 
         @media screen and (min-width: $tablet) { 
             width: 768px;
@@ -26,18 +24,17 @@
 
 .header-container {
     .nav-container {
-        @media screen and (max-width: $mobile) { 
+        @media screen and (max-width: $tablet) { 
             display: none;
         }
 
-        outline: 1px solid tomato;
         display: flex;
         align-items: center;
         justify-content: center;
 
         padding-left: 15px;
         padding-right: 15px;
-    
+
         .site-nav {
             display: flex;
             margin-left: 85px;
@@ -45,28 +42,21 @@
     }
 
     .mobnav-container {
-        @media screen and (max-width: $mobile) {
-            min-width: 480px;
-        }
-    
-        @media screen and (min-width: 481px) {
+        @media screen and (min-width: $tablet) {
             display: none;
         }
 
-        @media screen and (min-width: $desktop) {
-            display: none;
-        }
-
-        position:fixed;
+        position: fixed;
        
-        outline: 1px solid tomato;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
-        height: 60px;
+
         padding-left: 15px;
         padding-right: 15px;
+        
+        width: 480px;
+        height: 60px;
 
         background-color: $accent-color-secondary;
         
@@ -125,7 +115,7 @@
 }
 
 .site-nav {
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $tablet) {
         padding-top: 60px;
         margin-bottom: 60px;
         text-align: center;
@@ -142,7 +132,7 @@
     }
 
     .link {
-        @media screen and (max-width: $mobile) {
+        @media screen and (max-width: $tablet) {
             display: block;
             margin-left: auto;
             margin-right: auto ;
@@ -202,14 +192,17 @@
 }
 
 .site-contacts {
-    @media screen and (max-width: $mobile) {
-        text-align: center;
+/*Mobile menu base! style*/
+    text-align: center;
 
         .item:not(:last-child) {
             margin-bottom: 16px;
         }
-    }
-    
+
+    /*Mobile menu style*/
+
+
+    /*Desktop menu style*/   
     @media screen and (min-width: $desktop) {
         display: inline-flex;
         align-items: center;
@@ -223,6 +216,10 @@
 
         .item + .item {
             padding-left: 30px;
+        }
+
+        .item:not(:last-child) {
+            margin-bottom: 0;
         }
     }
 
